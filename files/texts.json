@@ -1,0 +1,17 @@
+{
+  "indexTitle": "Welcome to PSYCHOACOUSTICS-WEB",
+  "indexDescription": "PSYCHOACOUSTICS-WEB is a web developed tool to measure auditory sensory thresholds for a variety of classic tasks.You can run each test as a guest or you can create your personal account and costumize the toolbox for your own research. Please refer to the <a href=\"files/PSYCHOACOUSTICS-WEB_manual.pdf\">instruction manual</a> for further info on how to use the toolbox.<br><br>The tasks estimate the intensity, frequency and duration discrimination threshold for a pure tone. In the tasks you can set up the characteristics of the tone as well as the characteristics of the adaptive staircase. The tests implement the following adaptive staircase algorithms: simple up-down, 2-down 1-up, and 3-down 1-up. Please refer to Levitt (JASA, 1971) for more info on these adaptive staircases.",
+  "indexButtonPuretoneintensitydiscrimination": "Pure tone intensity discrimination",
+  "indexButtonPuretonefrequencydiscrimination": "Pure tone frequency discrimination",
+  "indexButtonPuretonedurationdiscrimination": "Pure tone duration discrimination",
+  "indexButtonWhitenoiseamplitudemodulationdetection": "White noise amplitude modulation detection",
+  "indexButtonWhitenoisegapdetection": "White noise gap detection",
+  "indexButtonWhitenoisedurationdiscrimination":  "White noise duration discrimination",
+
+  "answerPuretoneintensitydiscrimination": "Which is the loudest tone?",
+  "answerPuretonefrequencydiscrimination": "Which is the highest pitch tone?",
+  "answerPuretonedurationdiscrimination": "Which is the longest tone?",
+  "answerWhitenoiseamplitudemodulationdetection": "Which is the modulated noise?",
+  "answerWhitenoisegapdetection": "Which is the noise with the gap?",
+  "answerWhitenoisedurationdiscrimination":  "Which is the longest noise?"
+}

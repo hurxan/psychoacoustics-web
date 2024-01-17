@@ -1,0 +1,274 @@
+.alert {
+    margin: 12px;
+}
+
+.wallpaper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 110%;
+    object-fit: cover;
+    opacity: 0.6;
+    z-index: -1;
+    overflow: hidden;
+}
+
+.btn-red {
+    color: white;
+    font-weight: lighter;
+    text-align: center;
+    cursor: pointer;
+    background-color: darkred;
+    border: 0;
+}
+
+.btn-red:hover {
+    background-color: #50000A !important;
+}
+
+.btn-red:focus {
+    box-shadow: 0px 0px 3px #212529;
+}
+
+input[type="checkbox"], input[type="radio"] {
+    border: 1px solid #212529;
+}
+
+input[type="checkbox"]:checked, input[type="radio"]:checked {
+    background-color: darkred;
+    border: 1px solid #212529;
+}
+
+input[type="checkbox"]:focus, input[type="radio"]:focus {
+    border: 1px solid #212529;
+    box-shadow: 0px 0px 3px #212529;
+}
+
+.rotate {
+    transform: rotate(-45deg);
+    transition: all 0.3s ease-in-out 0s;
+}
+
+.rotate:hover {
+    transform: rotate(45deg);
+    transition: all 0.3s ease-in-out 0s;
+}
+
+.card:hover {
+    background-color: darkred !important;
+}
+
+/*.input-group{*/
+/*    margin-top: 10px;*/
+/*}*/
+
+/*.input-group.flex-nowrap{*/
+/*	width: 23%;*/
+/*	float: left;*/
+/*	margin-right: 2%; !*anche il margine si adatta con la dimensione dello schermo*!*/
+/*}*/
+
+/*#notesDiv{*/
+/*	!*a differenza degli altri input box della pagina per le info anagrafiche, questo è più largo,*/
+/*	quindi ha una classe in più con una proprietà in più (la larghezza)*!*/
+/*	width: 98%;*/
+/*}*/
+
+/*.form-check{*/
+/*    margin-top: 1.5%;*/
+/*    width: 23%;*/
+/*	float: right; !*il checkbox sta sulla destra in entrambe le pagine html*!*/
+/*}*/
+
+/*.btn.btn-primary.btn-lg.m-3.soundSettingsButton{*/
+/*	!*i pulsanti in soundsettings hanno una larghezza e dei margini diversi, quindi usano una classe in più*!*/
+/*	float: left;*/
+/*	margin: 5% !important;*/
+/*	margin-top: 0px !important;*/
+/*	margin-bottom: 2% !important;*/
+/*	width: 40%;*/
+/*}*/
+
+/*.little1, .little2{*/
+/*	!*in soundsettings i primi due gruppi di input box (i più piccoli) contengono solo oggetti float,*/
+/*	quindi hanno bisogno di avere una dimensione maggiore di 100% per coprire tutto. Gli oggetti con*/
+/*	proprietà float non occupano spazio e quindi il div crede di essere vuoto e diventa troppo piccolo*!*/
+/*	height: 130% !important;*/
+/*}*/
+
+/*.p-3.border.bg-light.little1 .input-group.flex-nowrap{*/
+/*	width: 31%;*/
+/*}*/
+
+/*.p-3.border.bg-light.little2 .input-group.flex-nowrap{*/
+/*	width: 31%;*/
+/*}*/
+
+/*.p-3.border.bg-light{*/
+/*	height: 99%;*/
+/*	border-radius: 20px;*/
+/*}*/
+
+/*.right-div{*/
+/*	!*il right div sta a destra*!*/
+/*	width: 48%;*/
+/*	float: right;*/
+/*	margin-bottom: 2%;*/
+/*	margin-left: 1%;*/
+/*}*/
+
+/*.right-div .input-group.flex-nowrap{*/
+/*	!*gli input box all'interno del right div stanno a destra*!*/
+/*	width: 100%;*/
+/*	float: left;*/
+/*}*/
+
+/*.left-div{*/
+/*	!*il left div sta a sinistra*!*/
+/*	width: 48%;*/
+/*	float: left;*/
+/*	margin-right: 1%;*/
+/*}*/
+
+/*.left-div .form-check{*/
+/*	!*normalmente i checkbox hanno width 23% (vedasi sopra), ma dentro al left div devono occupare tutto lo spazio*!*/
+/*	width: 100%;*/
+/*}*/
+
+/*.referral{*/
+/*	float: right !important;*/
+/*	width: 35% !important;*/
+/*	margin: 2% !important;*/
+/*}*/
+
+/*.refButton{*/
+/*	float: right;*/
+/*	margin: 2% !important;*/
+/*	padding: 6px 1% 6px !important;*/
+/*	font-size: 1.1rem;*/
+/*}*/
+
+/*.checkboxes{*/
+/*	margin-top: 5%;*/
+/*	padding-left: 0%;*/
+/*	margin-bottom: 2%;*/
+/*}*/
+
+
+/*.info.text{*/
+/*	margin: 4%;*/
+/*	margin-top:2%;*/
+/*	margin-bottom:0;*/
+/*	background-color: rgba(255,255,255,0.85);*/
+/*	border-radius: 30px;*/
+/*	padding: 2%;*/
+/*}*/
+
+/*.info.test {*/
+/*	margin: 3% 4% 0;*/
+/*}*/
+
+/*.info.test-title {*/
+/*	display: flex;*/
+/*	flex-wrap: nowrap;*/
+/*	align-items: center;*/
+/*	gap: 32px;*/
+/*}*/
+
+/*.info.test-title h5 {*/
+/*	margin: 0;*/
+/*}*/
+
+/*.info.test-preview {*/
+/*	background-color: white;*/
+/*	border-radius: 30px;*/
+/*	margin-top: 8px;*/
+/*	padding: 2%;*/
+/*}*/
+
+/*.info.test-preview-form {*/
+/*	padding: 3%;*/
+/*	background: #DDD;*/
+/*	border: 2px solid #000;*/
+/*	width: 50%;*/
+/*	margin: 30px auto;*/
+/*	border-radius: 10px;*/
+/*	text-align: center;*/
+/*}*/
+
+/*#alert {*/
+/*	margin: 40%;*/
+/*	margin-top: 0px;*/
+/*	margin-bottom: 0px;*/
+/*	text-align: center;*/
+/*	visibility: hidden;*/
+/*}*/
+
+/*.resultsBox{*/
+/*	margin-top: 10%;*/
+/*	text-align: center;*/
+/*	height: inherit !important;*/
+/*}*/
+
+/*.resultsBox > *{*/
+/*	margin-top: 5% !important;*/
+/*}*/
+
+/*!*quando la finestra è più piccola di 991 pixel, viene usato questo css*!*/
+/*@media all and (max-width: 991px) {*/
+
+/*	!*gli input box ora prendono tutta la riga, come le note*!*/
+/*	.input-group.flex-nowrap{*/
+/*		width: 98% !important;*/
+/*		float: none;*/
+/*		margin-right: 2%;*/
+/*	}*/
+
+/*	.right-div{*/
+/*		!*non sta più a destra, non c'è spazio per fare due colonne quindi vengono impilati verticalmente,*/
+/*		quindi tolgo tutti i float*!*/
+/*		width: 95%;*/
+/*		float: none;*/
+/*		margin-bottom: 5%;*/
+/*	}*/
+
+/*	.right-div .input-group.flex-nowrap{*/
+/*		width: 95%;*/
+/*		float: none;*/
+/*	}*/
+
+/*	.left-div{*/
+/*		width: 95%;*/
+/*		float: none;*/
+/*	}*/
+
+/*	.p-3.border.bg-light{*/
+/*		height: 101%;*/
+/*	}*/
+
+/*	.form-check{*/
+/*		!*per evitare che si sovrapponga ad altri oggetti*!*/
+/*		float: none;*/
+/*		margin: 5%;*/
+/*		width: 95%;*/
+/*	}*/
+
+/*	.referral{*/
+/*		margin: 0 !important;*/
+/*		margin-right: 2% !important;*/
+/*		margin-top: 5% !important;*/
+/*		float: none !important;*/
+/*		width: 98% !important;*/
+/*	}*/
+
+/*	.refButton{*/
+/*		min-width: 50px;*/
+/*		width: 20% !important;*/
+/*		margin-top: 5% !important;*/
+/*	}*/
+/*}*/
+
+.bg-white-transparent {
+    background-color: rgba(255, 255, 255, 0.85);
+}

@@ -1,0 +1,372 @@
+body{
+	background-color: #fff;
+}
+
+.alert{
+	margin:2%;
+}
+
+.wallpaper{
+	position:absolute;
+	top:40px;
+	left:0%;
+	width: 100%;
+	height: 100%;
+	object-fit:cover;
+	opacity: 0.6;
+	z-index: -1;
+	overflow: hidden;
+}
+
+.navbar{
+    box-shadow: 0px 2px 5px darkred;
+}
+
+.btn-outline-success{
+    float:right;
+    border-color: white;
+    color: white;
+}
+
+.btn-outline-danger{
+    float:right;
+    border-color: white;
+    color: white;
+}
+
+.btn-primary.btn-lg.m-3{
+    color: white;
+	font-weight: lighter;
+	text-align: center;
+	cursor: pointer;
+	background-color:darkred;
+	border: 0;
+}
+
+.btn-primary.btn-lg.m-3:hover{
+	background-color:#50000A;	
+}
+
+.btn-primary.btn-lg.m-3:focus{
+	box-shadow: 0px 0px 3px #212529;
+}
+
+.darkred{
+    background-color: darkred;
+    border-color: black;
+}
+
+.logout{
+	margin-left: 2%;
+	margin-top:0px;
+}
+
+.yourTests{
+	float: right;
+	margin-left: 2%;
+	margin-top:0px;
+	border-color: white;
+    color: white;
+}
+
+.logButtons{
+	text-align:right;
+	width: 60%;
+	margin-left: auto; 
+	margin-right: 0;
+}
+
+.welcomeMessage{
+	color:white;
+	margin-top: 7px;
+	margin-left: 0; 
+	margin-right: auto;
+	text-align:center;
+	text-decoration: none;
+}
+
+.settings{
+	float:right;
+	margin: 1%;
+	color: grey;
+	margin-left:2%;
+}
+
+.rotate{
+	transform: rotate(-45deg);
+    transition: all 0.3s ease-in-out 0s;
+}
+
+.settings:hover{
+	color: white;
+}
+
+.rotate:hover{
+	transform: rotate(45deg);
+    transition: all 0.3s ease-in-out 0s;
+}
+
+.navbar-brand{
+	width:40%;
+	margin-right: 0;
+}
+
+.description{
+	color:black; 
+	padding: 3%;
+	margin: 1%;
+	font-weight: 400;
+	background-color: rgba(255,255,255,0.5);
+	border-radius: 30px;
+}
+
+.descriptionTitle{
+	color:black; 
+	padding: 3%;
+	padding-bottom:1%;
+	font-size:60px; 
+	font-weight: 400;
+	text-align:center;
+	margin-top: 2%;
+}
+
+.cards{
+	margin:2%;	
+}
+
+.card{
+	float: left;
+    width: 30%;
+    margin: 1.5%;
+    margin-top: 3px;
+    box-shadow: 3px 3px 5px darkred;
+    color: white;
+	font-weight: lighter;
+	text-align: center;
+	cursor: pointer;
+	background-color:#212529;
+}
+
+.card:hover{
+	background-color:darkred;
+	color: white;
+    box-shadow: 10px 10px 5px #212529;
+}
+
+.settingForm{
+	padding: 40px;
+    background: #DDD;
+    border: 2px solid #000;
+    width: 90%;
+    margin: 30px auto;
+    border-radius: 10px;
+}
+
+.form-select{
+	margin: 2%;
+	width: 45%;
+	float: left;
+}
+
+.input-group.mb-3{
+	margin: 2%;
+	width: 45%;
+	float: left;
+}
+
+.input-group.mb-3.notes{
+	margin: 2%;
+	width: 94%;
+	float: left;
+}
+
+.input-group-text.link{
+	width: 70%;
+	display: initial;
+	/*da attivare quando ci sarà https
+	overflow:hidden; 
+	white-space:nowrap; 
+	text-overflow:ellipsis;
+	//*/
+	overflow:scroll; 
+	
+}
+
+.settingForm.ref .input-group-text.title{
+	width:30%;
+}
+
+h1, h3{
+	margin:2%;
+	margin-top:5%;
+}
+
+table{
+	margin:2%;
+	width: 95%;
+}
+
+tr:nth-child(even) {background: #CCC}
+tr:nth-child(odd) {background: #EEE}
+
+td{
+	text-align: center;
+	padding:1%;
+	padding-top: 2%;
+	padding-bottom: 2%;
+}
+
+.tableHeader{
+	background: #fff !important;
+	font-weight: 700;
+}
+
+@media all and (max-width: 900px) {
+	.wallpaper{
+		top:22%;
+	}
+	
+	.navbar-brand{
+		width: 95%;
+		margin: 2%;
+		text-align: center;
+		font-size:6vw;
+	}
+
+	.logButtons{
+		width: 95%;
+		margin: 2%;
+		text-align: center;
+	}
+	
+	.settings{
+		float:none;
+		margin: 2%;
+	}
+	
+	.logout{
+		width: 40%;
+		margin: 2%;
+	}
+
+	.yourTests{
+		float: none;
+		width: 40%;
+		margin: 2%;
+	}
+	
+	.welcomeMessage{
+		width: 75%;
+		margin: 2%;
+	}
+	
+	.btn-outline-success{
+		float: none;
+		width: 40%;
+		margin: 2%;
+	}
+
+	.btn-outline-danger{
+		float: none;
+		width: 40%;
+		margin: 2%;
+	}
+	
+	.descriptionTitle{
+		padding: 0.5%;
+		padding-top: 3%;
+		font-size:1.5em; 
+		font-weight: 500;
+	}
+	
+	.description{
+		padding: 1%;
+		margin: 1%;
+		font-weight: 400;
+		font-size:1em;
+	}
+	
+	.card-body{
+		padding:1%;
+	}
+	
+	.card-title{
+		font-size: 0.9em;
+		font-weight: 350;
+	}
+	
+	.card-body p{
+		font-size: 0.8em;
+		font-weight: 250;
+	}
+	
+	.settingForm{
+		padding: 2%;
+		width: 98%;
+		margin: 2%;
+	}
+
+	.input-group.mb-3{
+		margin: 2%;
+		width: 95%;
+		float: none;
+	}
+
+	.input-group-text.link{
+		width: 60%;
+		display: initial;
+		/*da attivare quando ci sarà https
+		overflow:hidden; 
+		white-space:nowrap; 
+		text-overflow:ellipsis;
+		//*/
+		overflow:scroll; 
+		
+	}
+
+	.settingForm.ref .input-group-text.title{
+		width:40%;
+	}
+	
+	.input-group.mb-3 select{
+		width: 60%;
+	}
+	
+	.form-select{
+		margin: 2%;
+		margin-bottom: 1rem;
+		width: 95%;
+		float: none;
+	}
+
+	.input-group.mb-3.notes{
+		margin: 2%;
+		width: 95%;
+		float: none;
+	}
+	
+	.btn-primary.btn-lg.m-3{
+		width: 90%;
+		margin: 5%;
+	}
+	
+	table{
+		font-size: 0.8em;
+		font-weight: 350;
+	}
+	
+	.tableHeader{
+		font-size: 1em;
+	}
+	
+	td{
+		overflow:hidden; 
+		white-space:nowrap; 
+		text-overflow:ellipsis;
+		text-align: left;
+		padding-left:1%;
+		padding-top: 1%;
+		padding-bottom: 1%;
+		max-width: 1em;
+	}
+}

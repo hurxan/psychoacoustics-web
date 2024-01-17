@@ -81,6 +81,7 @@ if (isset($_GET['err'])) {
     </h1>
     <p class="p-5 bg-white-transparent rounded-5 fs-5" id="indexDescription">
         PSYCHOACOUSTICS is a web developed tool to measure auditory sensory thresholds for a
+        aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaal
         variety of classic tasks. You can run each test as a guest or you can create your personal
         account and costumize the toolbox for your own research. Please refer to the <a
                 href="files/PSYCHOACOUSTICS-WEB_manual.pdf">instruction

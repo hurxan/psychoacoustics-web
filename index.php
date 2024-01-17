@@ -145,14 +145,14 @@ if (isset($_GET['err'])) {
             </a>
         </div>
 
-        <div class="col">
+        <!-- <div class="col">
             <a href="demographicData.php?test=ndur" class="text-decoration-none text-white">
                 <div class="bg-light rounded-3 p-4 text-center shadow-lg card bg-dark">
                     <h5 class="bg-light-title" id="indexButtonWhitenoisedurationdiscrimination">White noise duration discrimination</h5>
                     <p id="indexButtonsDescription">Click here to run the test</p>
                 </div>
             </a>
-        </div>
+        </div> -->
     </div>
 </div>
 </body>

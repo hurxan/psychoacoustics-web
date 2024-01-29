@@ -27,6 +27,44 @@ if (isset($_GET['err'])) {
         echo "<div class='alert alert-danger'>Username already taken</div>";
 }
 ?>
+<div class="container my-5 p-4 p-sm-5 border rounded rounded-4 bg-light">
+    <p style="color: black;"> TERMS AND CONDITION
+        PSYCHOACOUSTICS-WEB is a research tool designed by Giulio Contemori, Andrea Felline, Gnana Prakash Goli, Mauro Migliardi, Niccolò Orlandi, Mattia Toffanin under the supervision and responsibility of Massimo Grassi. The responsible person and referent person of PSYCHOACOUSTICS-WEB (hereafter referred to as “referent person”) is Massimo Grassi, Department of General Psychology, University of Padua, via Venezia 8, 35134, Padua, Italy, email: massimo.grassi@unipd.it, phone (office): +39 0498277494. PSYCHOACOUSTICS-WEB complies with the current pertinent regulations related to research ethics and professional deontology, such as: The General Data Protection Regulation (EU) 2016/679 ("GDPR"), the decree “Regole deontologiche per trattamenti a fini statistici o di ricerca scientifica pubblicate ai sensi dell’art. 20, comma 4, del d.lgs. 10 agosto 2018, n. 101 - 19 dec 2018”.
+        
+        Brief description and aim.
+        PSYCHOACOUSTICS-WEB is a tool that enables to estimate the human auditory sensitivity for a set of acoustical parameters such as acoustics frequency, acoustic intensity, sound duration and other characteristics related to sound. PSYCHOACOUSTICS-WEB is not a clinical tool nor provides clinical measures related to hearing. It is a purely research tool that provides measures of human auditory sensitivity that are relevant for research purposes only. PSYCHOACOUSTICS-WEB cannot be used for commercial purposes. PSYCHOACOUSTICS-WEB is designed for three different types of users and can be used in three ways: (i) by an occasional user that accesses the tool from the tool’s website; (ii) by a researcher (hereafter referred to as researcher) that creates a personal account and invites participants to participate to experiments s/he created with the tool via direct links; (iii) by a participant of an experiment that receives a direct link to one experiment sent by a researcher. 
+
+        Accessibility and support.
+        If you need assistance or further information about the tool please contact the referent person. If you are the participant of an experiment, please refer to the researcher that invited you via invite link.
+        
+        Data treatment.
+        The data collected through PSYCHOACOUSTICS-WEB can be used for research, teaching or “third mission” (e.g., scientific dissemination to the general population) purposes either by the referent person or by the researcher that invited you to use the tool. The referent person and/or the researcher commit to treat the data collected with confidentiality. Your privacy will be protected to the maximum extent allowable by law. Data will be stored in the web-server for the Department of General Psychology of the University of Padua that is accessible by the referent person or by the technical personnel of the department. In the case data are downloaded from the server, they will be stored in the referent person’s personal computer, and/or in the researcher’s personal computer and/or in the personal computer of the referent person’s collaborators and/or researcher’s collaborators. Data can also be stored into open access research archives and made available to the research community. If your data will be used for any of the aims described above, your data will be presented either aggregated or -if presented individually- anonymized so that your identity will remain confidential to the referent person and/or the researcher. In the case data will be stored in an open access research archive, data will be anonymized. The person responsible for your data is either the referent person or the researcher.
+        
+        Deletion of your data.
+        When you use PSYCHOACOUSTICS-WEB, the tool prompts you a “participant’s ID”. This ID is also recorded together with your data. This ID is a unique identifier of your own data. In the case you want to withdraw the right to use your data, you can ask for the deletion of the data from the server by contacting the referent person and providing your ID. The ID can also be provided to the referent person, the researcher and their collaborators to delete the copy of your data that are stored in the personal computers of the research team conducting the research. The deletion request must arrive within five years from the moment the data were collected. After this time, the referent person, the researcher or the collaborators reserve the right to keep your data.
+        
+        Additional terms and conditions for “researchers”.
+        In the case you create a personal account in PSYCHOACOUSTICS-WEB, the personal data of your account will be stored in the server of the Department of General Psychology of the University of Padua. Your personal data will be accessible only by the referent person or by the technical personnel of the department. The referent person reserves the right to block the account of the researcher in the case the researcher does not respect the terms and conditions written above or uses the tool inappropriately.
+
+
+        !!!DO NOT COPY FROM HERE BELOW!!!
+        Security Measures:
+        While the terms mention confidentiality and data protection, it could be beneficial to explicitly outline the security measures in place to safeguard the data. This could include encryption protocols, access controls, and any other security measures implemented to prevent unauthorized access.
+        Data Access and Sharing:
+        Clarify who, besides the responsible person and researchers, may have access to the collected data. If any third parties or collaborators are involved, specify the conditions under which they may access or use the data.
+        Data Retention Policy:
+        Although the terms mention the right to delete data upon user request, it would be helpful to include a clear data retention policy. Specify how long data will be retained for active use and under what circumstances data may be retained beyond the initial storage period.
+        User Consent:
+        Confirm that users explicitly consent to the terms and conditions before using the tool. Clearly state that by using the tool, users are agreeing to the outlined terms.
+        Changes to Terms:
+        Include a provision that allows for updates to the terms and conditions. Notify users about any changes and provide a mechanism for them to review the updated terms.
+        Dispute Resolution:
+        Consider including a section on dispute resolution, outlining the process to be followed in case of disagreements or disputes related to the use of the tool and data.
+        Notification of Data Breach:
+        Include a clause regarding the obligation to notify users in the event of a data breach, in compliance with applicable data protection regulations.
+        Remember that legal requirements may vary based on jurisdiction, so it's advisable to consult with legal professionals to ensure full compliance with relevant laws and regulations.
+    </p> 
+</div>
 <div class="container my-5">
     <div class="row justify-content-center">
         <div class="col-12 col-md-6">
@@ -86,6 +124,9 @@ if (isset($_GET['err'])) {
                     <div class="input-group mb-3">
                         <span class="input-group-text" id="basic-addon1">Notes</span>
                         <input type="text" class="form-control" placeholder="Notes" name="notes">
+                    </div>
+                    <div>
+                        <p style="color: black;">If you click “register” you accept the conditions reported below.</p> 
                     </div>
                     <div class="d-grid">
                         <button type="submit" class="btn btn-primary btn-lg btn-red">Register</button>

@@ -476,17 +476,6 @@ if (isset($_SESSION['usr'])) {
                     <div class="row gy-3">
                         <div class="col-12">
                             <div class="form-check"
-                                 title="every correct answer increases the difficulty of the test, every wrong answer makes it easier">
-                                <input class="form-check-input" type="radio" name="algorithm"
-                                       value="SimpleUpDown" id="alg"
-                                    <?php if ($row && $row['alg'] == "SimpleUpDown")
-                                        echo "checked";
-                                    ?>>
-                                <label class="form-check-label" for="flexRadioDefault1">
-                                    SimpleUpDown
-                                </label>
-                            </div>
-                            <div class="form-check"
                                  title="two consecutive correct answers increase the difficulty of the test, every wrong answer makes it easier">
                                 <input class="form-check-input" type="radio" name="algorithm"
                                        value="TwoDownOneUp" id="alg"

@@ -33,4 +33,15 @@ function updatePage(display){
 			elems[j].style.display = "none";
 	}
 }
+
+let audio = new Audio("audio/sound.mp3");
+let volume = document.getElementById("volume");
+// update the volume when the slider is moved
+volume.addEventListener("input", (e) => {
+  console.log("playing");
+  audio.volume = e.currentTarget.value / 100;
+  audio.play();
+  window.setTimeout(function(){audio.pause();}, 2000);
+});
+
 window.updatePage = updatePage;

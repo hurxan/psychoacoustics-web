@@ -19,9 +19,7 @@
     <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet"
           href="css/staircaseStyle.css<?php if (isset($_SESSION['version'])) echo "?{$_SESSION['version']}"; ?>">
-    <script type="text/javascript"
-            src="js/funzioni.js<?php if (isset($_SESSION['version'])) echo "?{$_SESSION['version']}"; ?>"></script>
-
+    
     <title>Psychoacoustics-web - Personal info</title>
 
     <script>
@@ -85,112 +83,121 @@ if (isset($_GET['err'])) {
 ?>
 
 
-<div class="container my-5 p-4 p-sm-5 border rounded rounded-4 bg-light">
-    <h2>Personal Informations</h2>
+<div class="container my-5 ">
     <form name="staircase" method="post" action="php/personalInfoValidation.php<?php
     if (isset($_GET["test"]))
         echo "?test=" . $_GET["test"];
     ?>">
         <!-- Contenuto dello slot, qui vanno inseriti tutti i bottoni e i check box del primo slot -->
-        <div class="row align-items-center g-4">
-            <div class="col-12 col-lg-3">
-                <div class="input-group flex-nowrap conditionalDisplay">
-                        <span class="input-group-text"
-                              id="name">Name<?php if (!isset($_SESSION['usr'])) echo "*"; ?></span>
-                    <input type="text" class="form-control" id="inputName" placeholder="Name" name="name">
-                </div>
-            </div>
-            <div class="col-12 col-lg-3">
-                <div class="input-group flex-nowrap conditionalDisplay">
-                    <span class="input-group-text" id="surname">Surname</span>
-                    <input type="text" class="form-control" id="inputSurname" placeholder="Surname" name="surname">
-                </div>
-            </div>
-            <div class="col-12 col-lg-3">
-                <div class="input-group flex-nowrap conditionalDisplay">
-                    <span class="input-group-text" id="age">Age</span>
-                    <input type="text" class="form-control" id="inputAge" placeholder="Age" name="age">
-                </div>
-            </div>
-            <div class="col-12 col-lg-3">
-                <div class="input-group flex-nowrap conditionalDisplay">
-                    <span class="input-group-text" id="gender">Gender</span>
-                    <select name='gender' class="form-select">
-                        <option disabled="disabled" selected value="null" id="NullGender">Select your gender
-                        </option>
-                        <?php
-                        try {
-                            $conn = new mysqli($host, $user, $password, $dbname);
-                            if ($conn->connect_errno)
-                                throw new Exception('DB connection failed');
-                            mysqli_set_charset($conn, "utf8");
+        <div>
+            <div class ="p-5 border rounded rounded-4 bg-light">   
+                <div class = "row col-12" style="margin-bottom:10px;">
+                    <h2>Personal Informations</h2>
+                </div>             
+                <div class="row align-items-center g-4">
+                    <div class="col-12 col-lg-3">
+                        <div class="input-group flex-nowrap conditionalDisplay">
+                                <span class="input-group-text"
+                                    id="name">Name<?php if (!isset($_SESSION['usr'])) echo "*"; ?></span>
+                            <input type="text" class="form-control" id="inputName" placeholder="Name" name="name">
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-3">
+                        <div class="input-group flex-nowrap conditionalDisplay">
+                            <span class="input-group-text" id="surname">Surname</span>
+                            <input type="text" class="form-control" id="inputSurname" placeholder="Surname" name="surname">
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-3">
+                        <div class="input-group flex-nowrap conditionalDisplay">
+                            <span class="input-group-text" id="age">Age</span>
+                            <input type="text" class="form-control" id="inputAge" placeholder="Age" name="age">
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-3">
+                        <div class="input-group flex-nowrap conditionalDisplay">
+                            <span class="input-group-text" id="gender">Gender</span>
+                            <select name='gender' class="form-select">
+                                <option disabled="disabled" selected value="null" id="NullGender">Select your gender
+                                </option>
+                                <?php
+                                try {
+                                    $conn = new mysqli($host, $user, $password, $dbname);
+                                    if ($conn->connect_errno)
+                                        throw new Exception('DB connection failed');
+                                    mysqli_set_charset($conn, "utf8");
 
-                            $sql = "SELECT COLUMN_TYPE AS ct FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_SCHEMA = 'psychoacoustics_db' AND TABLE_NAME = 'guest' AND COLUMN_NAME = 'gender';";
-                            $result = $conn->query($sql);
-                            $row = $result->fetch_assoc();//questa query da un risultato di tipo enum('Male','Female','Non-Binary')
+                                    $sql = "SELECT COLUMN_TYPE AS ct FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_SCHEMA = 'psychoacoustics_db' AND TABLE_NAME = 'guest' AND COLUMN_NAME = 'gender';";
+                                    $result = $conn->query($sql);
+                                    $row = $result->fetch_assoc();//questa query da un risultato di tipo enum('Male','Female','Non-Binary')
 
-                            //metto i valori in un array
-                            $values = substr($row['ct'], 5, -1);//tolgo "enum(" e ")"
-                            $values = str_replace("'", "", $values);//tolgo gli apici
-                            $list = explode(",", $values);//divido in una lista in base alle virgole
+                                    //metto i valori in un array
+                                    $values = substr($row['ct'], 5, -1);//tolgo "enum(" e ")"
+                                    $values = str_replace("'", "", $values);//tolgo gli apici
+                                    $list = explode(",", $values);//divido in una lista in base alle virgole
 
-                            //creo un'opzione per ogni possibile valore
-                            foreach ($list as $elem)
-                                echo "<option value='" . strtoupper($elem) . "'>" . strtoupper($elem) . "</option>";
-                        } catch (Exception $e) {
-                            header("Location: index.php?err=db");
-                        }
-                        ?>
-                    </select>
-                </div>
-            </div>
-            <div class="col-12">
-                <div class="input-group flex-nowrap conditionalDisplay" id="notesDiv">
-                    <span class="input-group-text" id="notes">Notes</span>
-                    <input type="text" class="form-control" id="inputNotes" placeholder="Notes" name="notes">
-                </div>
-            </div>
-            <div class="col-12 col-lg-6">
-                <p style="color: black;"><strong>Warning:</strong> High intensity sounds can damage your hearing. Please use the slider to adjust the intensity to a comfortable level before starting the test.</p> 
-                <p style="color: black;"><strong>Notice:</strong> The maximum intensity also depends on your system volume setting.</p> 
-            </div>
-            <div class="col-12 col-lg-6">    
-                    <form method="post" action="">
+                                    //creo un'opzione per ogni possibile valore
+                                    foreach ($list as $elem)
+                                        echo "<option value='" . strtoupper($elem) . "'>" . strtoupper($elem) . "</option>";
+                                } catch (Exception $e) {
+                                    header("Location: index.php?err=db");
+                                }
+                                ?>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="input-group flex-nowrap conditionalDisplay" id="notesDiv">
+                            <span class="input-group-text" id="notes">Notes</span>
+                            <input type="text" class="form-control" id="inputNotes" placeholder="Notes" name="notes">
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-6">
+                        <p style="color: black;"><strong>Warning:</strong> High intensity sounds can damage your hearing. Please use the slider to adjust the intensity to a comfortable level before starting the test.</p> 
+                        <p style="color: black;"><strong>Notice:</strong> The maximum intensity also depends on your system volume setting.</p> 
+                    </div>
+                    <div class="col-12 col-lg-6">    
+                        <form method="post" action="">
                                 <label for="volume">Intensity:</label>
                                 <input type="range" id="volume" name="volume" min="0" max="100" step="1">
-                    </form>
-            </div>               
-            <!-- i bottoni sono fuori dal terzo slot -->
-        </div>
+                        </form>
+                    </div>               
+                    <div class="col-12 col-lg-6">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" name="checkSave"
+                                checked>
+                            <label class="form-check-label" for="flexCheckDefault">Save results</label>
+                        </div>
+                    </div>                
+                </div>
+            </div>
+            <div class="p-5 border rounded rounded-4 bg-light" style="margin-top:10px">
+                <!-- i bottoni sono fuori dal terzo slot -->
+                <div class="row align-items-center g-4">
+                    <div class = "col-12">
+                        <div class="col-lg-6">
+                            <div class="col-12 ">
+                                <p style="color: black;"><strong>Warning:</strong>if you press “NEXT” you accept the “Terms and conditions" written below.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row row-cols-2 gy-2">
+                        <div class="col d-grid">
+                            <button type="button" class="btn btn-primary btn-lg btn-red"
+                                    onclick="location.href='index.php'">
+                                BACK
+                            </button>
+                        </div>
+                        <div class="col d-grid">
+                            <button type="submit" class="btn btn-primary btn-lg btn-red">
+                                Next
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>      
+        </div>   
     </form>
-</div>
-<div class="container my-5 p-4 p-sm-5 border rounded rounded-4 bg-light">
-    <form name="staircase" method="post" action="php/personalInfoValidation.php<?php
-        if (isset($_GET["test"]))
-            echo "?test=" . $_GET["test"];
-        ?>">
-
-            <div class="col-lg-6">
-                <div class="col-12 ">
-                    <p style="color: black;"><strong>Warning:</strong>if you press “NEXT” you accept the “Terms and conditions" written below.</p>
-                </div>
-            </div>
-            <div class="container mt-3">
-                <div class="row row-cols-2 gy-2">
-                    <div class="col d-grid">
-                        <button type="button" class="btn btn-primary btn-lg btn-red"
-                                onclick="location.href='index.php'">
-                            BACK
-                        </button>
-                    </div>
-                    <div class="col d-grid">
-                        <button type="submit" class="btn btn-primary btn-lg btn-red">
-                            Next
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </form>              
 </div>
 <div class="container my-5 p-4 p-sm-5 border rounded rounded-4 bg-light">
     <p style="color: black;"> TERMS AND CONDITION
@@ -230,6 +237,8 @@ if (isset($_GET['err'])) {
         Remember that legal requirements may vary based on jurisdiction, so it's advisable to consult with legal professionals to ensure full compliance with relevant laws and regulations.
     </p> 
 </div>
+<script type="text/javascript"
+            src="js/funzioni.js<?php if (isset($_SESSION['version'])) echo "?{$_SESSION['version']}"; ?>"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
         crossorigin="anonymous"></script>

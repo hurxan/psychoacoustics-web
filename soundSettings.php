@@ -405,8 +405,7 @@ if (isset($_SESSION['usr'])) {
                     </div>
                 <?php } ?>
 
-                <div class="col"
-                    <?php if ($type == "nmod") echo 'style = "display: none"' ?>>
+                <div class="col">
                     <div class="input-group flex-nowrap"
                          title="the starting difference between the sounds">
                         <span class="input-group-text">

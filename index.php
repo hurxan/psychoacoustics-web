@@ -3,7 +3,7 @@
 <head>
     <?php
     session_start();
-    $_SESSION['version'] = 4; //change this number to force cache update
+    $_SESSION['version'] = 5; //change this number to force cache update
     ?>
 
     <!-- Required meta tags -->

@@ -36,12 +36,12 @@
 			//scrivo il nome delle colonne
 			$line = "Name;Surname;Age;Gender;Test Count;Test Type;Timestamp;Sample Rate;Device Info;Amplitude;Frequency;Duration;Onset Ramp;Offset Ramp;Modulator Amplitude;ModulatorFrequency;Modulator Phase;n. of blocks;";
 			$line .= "nAFC;ISI;ITI;First factor;First reversals;Second factor;Second reversals;reversal threshold;algorithm;";
-			$line .= "block;trials;delta;variable;Variable Position;Pressed button;correct?;reversals\n";
+			$line .= "block;trials;delta;variable;Variable Position;Pressed button;correct?;reversals;notes\n";
 			
 			fwrite($txt, $line);
 			
 			//metto i dati dei guest collegati
-			$sql = "SELECT guest.Name as name, guest.Surname as surname, guest.Age as age, guest.Gender as gender, 
+			$sql = "SELECT guest.Name as name, guest.Surname as surname, guest.Notes as notes, guest.Age as age, guest.Gender as gender, 
 					test.Test_count as count, test.Type as type, test.Timestamp as time, test.Amplitude as amp, 
 					test.Frequency as freq, test.Duration as dur, test.OnRamp as onRamp, test.OffRamp as offRamp,
 					test.ModAmplitude as modAmp, test.ModFrequency as modFreq, test.ModPhase as modPhase, test.SampleRate as sampleRate, test.blocks as blocks, test.nAFC as nafc, 
@@ -65,7 +65,7 @@
 				//valore della prima parte (quella fissa che va ripetuta)
 				$firstValues = $row["name"].";".$row["surname"].";".$age.";".$row["gender"].";".$row["count"].";".$row["type"].";".$row["time"].";".$row["sampleRate"].";".$row["deviceInfo"].";";
 				$firstValues .= $row["amp"].";".$row["freq"].";".$row["dur"].";".$row["onRamp"].";".$row["offRamp"].";".$row["modAmp"].";".$row["modFreq"].";".$row["modPhase"].";".$row["blocks"].";".$row["nafc"].";".$row["isi"].";".$row["iti"].";";
-				$firstValues .= $row["fact"].";".$row["rev"].";".$row["secfact"].";".$row["secrev"].";".$row["thr"].";".$row["alg"];
+				$firstValues .= $row["fact"].";".$row["rev"].";".$row["secfact"].";".$row["secrev"].";".$row["thr"].";".$row["alg"].";".$row["notes"];
 					
 				//parte variabile e scrittura su file
 				$results = explode(",", $row["results"]);

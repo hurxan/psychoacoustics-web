@@ -394,7 +394,7 @@ if (isset($_SESSION['usr'])) {
                     <div class="col">
                         <div class="input-group flex-nowrap"
                             title="dB of the modulator, 0dB = 1 is the maximum value">
-                            <span class="input-group-text">Amplitude</span>
+                            <span class="input-group-text">Modulator Depth</span>
                             <input type="text" class="form-control" name="modAmplitude" id="modAmplitude"
                                 value="<?php
                                 if ($row && $row["modAmp"] != "")
@@ -440,7 +440,7 @@ if (isset($_SESSION['usr'])) {
                                    if ($row && $row['type'] == 'WHITE_NOISE_DURATION')
                                        echo $row['delta'];
                                    else
-                                       echo "375";
+                                       echo "300";
                                } else if ($type == "gap") {
                                    if ($row && $row['type'] == 'WHITE_NOISE_GAP')
                                        echo $row['delta'];

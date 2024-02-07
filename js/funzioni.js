@@ -34,8 +34,8 @@ function updatePage(display){
 	}
 }
 
-let audio = new Audio("audio/sound.mp3");
-let volume = document.getElementById("intesity");
+audio = new Audio("audio/sound.mp3");
+volume = document.getElementById("volume");
 // update the volume when the slider is moved
 volume.addEventListener("input", (e) => {
   console.log("playing");

@@ -177,7 +177,7 @@ if (isset($_GET['err'])) {
                     <div class = "col-12">
                         <div class="col-lg-6">
                             <div class="col-12 ">
-                                <p style="color: black;"><strong>Warning:</strong>if you press “NEXT” you accept the “Terms and conditions" written below.</p>
+                                <p style="color: black;"><strong>Warning:</strong> if you press “NEXT” you accept the “Terms and conditions" written below.</p>
                             </div>
                         </div>
                     </div>
@@ -190,7 +190,7 @@ if (isset($_GET['err'])) {
                         </div>
                         <div class="col d-grid">
                             <button type="submit" class="btn btn-primary btn-lg btn-red">
-                                Next
+                                NEXT
                             </button>
                         </div>
                     </div>
@@ -200,7 +200,7 @@ if (isset($_GET['err'])) {
     </form>
 </div>
 <div class="container my-5 p-4 p-sm-5 border rounded rounded-4 bg-light">
-    <p style="color: black;"> TERMS AND CONDITION
+    <p style="color: black;"> TERMS AND CONDITION.
         PSYCHOACOUSTICS-WEB is a research tool designed by Giulio Contemori, Andrea Felline, Gnana Prakash Goli, Mauro Migliardi, Niccolò Orlandi, Mattia Toffanin under the supervision and responsibility of Massimo Grassi. The responsible person and referent person of PSYCHOACOUSTICS-WEB (hereafter referred to as “referent person”) is Massimo Grassi, Department of General Psychology, University of Padua, via Venezia 8, 35134, Padua, Italy, email: massimo.grassi@unipd.it, phone (office): +39 0498277494. PSYCHOACOUSTICS-WEB complies with the current pertinent regulations related to research ethics and professional deontology, such as: The General Data Protection Regulation (EU) 2016/679 ("GDPR"), the decree “Regole deontologiche per trattamenti a fini statistici o di ricerca scientifica pubblicate ai sensi dell’art. 20, comma 4, del d.lgs. 10 agosto 2018, n. 101 - 19 dec 2018”.
         
         Brief description and aim.

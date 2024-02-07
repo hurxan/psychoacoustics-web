@@ -389,9 +389,9 @@ if (isset($_SESSION['usr'])) {
                         <span class="input-group-text">ms</span>
                     </div>
                 </div>
-                <div class="col">
-                        <div class="input-group flex-nowrap"
-                             title="dB of the modulator, 0dB = 1 is the maximum value">
+                <?php if ($type !== "nmod") { ?>
+                    <div class="col">
+                        <div class="input-group flex-nowrap" title="dB of the modulator, 0dB = 1 is the maximum value">
                             <span class="input-group-text">Delta</span>
                             <input type="text" class="form-control" name="modAmplitude" id="modAmplitude"
                                    value="<?php
@@ -403,6 +403,7 @@ if (isset($_SESSION['usr'])) {
                             <span class="input-group-text">dB</span>
                         </div>
                     </div>
+                <?php } ?>
 
                 <div class="col"
                     <?php if ($type == "nmod") echo 'style = "display: none"' ?>>

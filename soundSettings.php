@@ -298,6 +298,20 @@ if (isset($_SESSION['usr'])) {
                 <div class="row row-cols-1 row-cols-lg-3 gy-3">
                     <div class="col">
                         <div class="input-group flex-nowrap"
+                             title="dB of the modulator, 0dB = 1 is the maximum value">
+                            <span class="input-group-text">Amplitude</span>
+                            <input type="text" class="form-control" name="modAmplitude" id="modAmplitude"
+                                   value="<?php
+                                   if ($row && $row["modAmp"] != "")
+                                       echo $row['modAmp'];
+                                   else
+                                       echo "-7.95";
+                                   ?>">
+                            <span class="input-group-text">dB</span>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="input-group flex-nowrap"
                              title="Hz of the modulator">
                             <span class="input-group-text">Frequency</span>
                             <input type="text" class="form-control" name="modFrequency" id="modFrequency"
@@ -389,23 +403,8 @@ if (isset($_SESSION['usr'])) {
                         <span class="input-group-text">ms</span>
                     </div>
                 </div>
-                <?php if ($row && $row["nmod"] != "") { ?>
-                    <div class="col">
-                        <div class="input-group flex-nowrap" title="dB of the modulator, 0dB = 1 is the maximum value">
-                            <span class="input-group-text">Delta</span>
-                            <input type="text" class="form-control" name="modAmplitude" id="modAmplitude"
-                                   value="<?php
-                                   if ($row && $row["nmod"] != "")
-                                       echo $row['nmod'];
-                                   else
-                                       echo "-8";
-                                   ?>">
-                            <span class="input-group-text">dB</span>
-                        </div>
-                    </div>
-                <?php } ?>
-
-                <div class="col">
+                <div class="col"
+                    <?php if ($type == "nmod") echo 'style = "display: none"' ?>>
                     <div class="input-group flex-nowrap"
                          title="the starting difference between the sounds">
                         <span class="input-group-text">
@@ -437,7 +436,7 @@ if (isset($_SESSION['usr'])) {
                                    if ($row && $row['type'] == 'WHITE_NOISE_DURATION')
                                        echo $row['delta'];
                                    else
-                                       echo "300";
+                                       echo "375";
                                } else if ($type == "gap") {
                                    if ($row && $row['type'] == 'WHITE_NOISE_GAP')
                                        echo $row['delta'];
@@ -447,7 +446,7 @@ if (isset($_SESSION['usr'])) {
                                    if ($row && $row['type'] == 'WHITE_NOISE_MODULATION')
                                        echo $row['delta'];
                                    else
-                                       echo "-8";
+                                       echo "12";
                                }
                                ?>">
                         <span class="input-group-text">
@@ -476,6 +475,17 @@ if (isset($_SESSION['usr'])) {
                 <div class="col">
                     <div class="row gy-3">
                         <div class="col-12">
+                            <div class="form-check"
+                                 title="every correct answer increases the difficulty of the test, every wrong answer makes it easier">
+                                <input class="form-check-input" type="radio" name="algorithm"
+                                       value="SimpleUpDown" id="alg"
+                                    <?php if ($row && $row['alg'] == "SimpleUpDown")
+                                        echo "checked";
+                                    ?>>
+                                <label class="form-check-label" for="flexRadioDefault1">
+                                    SimpleUpDown
+                                </label>
+                            </div>
                             <div class="form-check"
                                  title="two consecutive correct answers increase the difficulty of the test, every wrong answer makes it easier">
                                 <input class="form-check-input" type="radio" name="algorithm"

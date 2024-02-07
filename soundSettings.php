@@ -389,7 +389,7 @@ if (isset($_SESSION['usr'])) {
                         <span class="input-group-text">ms</span>
                     </div>
                 </div>
-                <?php if ($type !== "nmod") { ?>
+                <?php if ($row && $row["nmod"] != "") { ?>
                     <div class="col">
                         <div class="input-group flex-nowrap" title="dB of the modulator, 0dB = 1 is the maximum value">
                             <span class="input-group-text">Delta</span>

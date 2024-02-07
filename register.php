@@ -45,24 +45,6 @@ if (isset($_GET['err'])) {
         
         Additional terms and conditions for “researchers”.
         In the case you create a personal account in PSYCHOACOUSTICS-WEB, the personal data of your account will be stored in the server of the Department of General Psychology of the University of Padua. Your personal data will be accessible only by the referent person or by the technical personnel of the department. The referent person reserves the right to block the account of the researcher in the case the researcher does not respect the terms and conditions written above or uses the tool inappropriately.
-
-
-        !!!DO NOT COPY FROM HERE BELOW!!!
-        Security Measures:
-        While the terms mention confidentiality and data protection, it could be beneficial to explicitly outline the security measures in place to safeguard the data. This could include encryption protocols, access controls, and any other security measures implemented to prevent unauthorized access.
-        Data Access and Sharing:
-        Clarify who, besides the responsible person and researchers, may have access to the collected data. If any third parties or collaborators are involved, specify the conditions under which they may access or use the data.
-        Data Retention Policy:
-        Although the terms mention the right to delete data upon user request, it would be helpful to include a clear data retention policy. Specify how long data will be retained for active use and under what circumstances data may be retained beyond the initial storage period.
-        User Consent:
-        Confirm that users explicitly consent to the terms and conditions before using the tool. Clearly state that by using the tool, users are agreeing to the outlined terms.
-        Changes to Terms:
-        Include a provision that allows for updates to the terms and conditions. Notify users about any changes and provide a mechanism for them to review the updated terms.
-        Dispute Resolution:
-        Consider including a section on dispute resolution, outlining the process to be followed in case of disagreements or disputes related to the use of the tool and data.
-        Notification of Data Breach:
-        Include a clause regarding the obligation to notify users in the event of a data breach, in compliance with applicable data protection regulations.
-        Remember that legal requirements may vary based on jurisdiction, so it's advisable to consult with legal professionals to ensure full compliance with relevant laws and regulations.
     </p> 
 </div>
 <div class="container my-5">

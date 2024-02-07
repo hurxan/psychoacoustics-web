@@ -86,10 +86,9 @@ if (isset($_GET['err'])) {
                 href="files/PSYCHOACOUSTICS-WEB_manual.pdf">instruction
             manual</a> for further info on how to use the toolbox.
         <br><br>
-        The tasks estimate the intensity, frequency and duration discrimination threshold for a pure tone.
-        In the tasks you can set up the characteristics of the tone as well as
+        In the tasks you can set up the characteristics of the sounds as well as
         the characteristics of the adaptive staircase. The tests implement the
-        following adaptive staircase algorithms: simple up-down, 2-down 1-up,
+        following adaptive staircase algorithms: 2-down 1-up,
         and 3-down 1-up. Please refer to Levitt (JASA, 1971) for more info on
         these adaptive staircases.
     </p>

@@ -192,16 +192,25 @@
 
                 <!-- i bottoni sono fuori dal terzo slot -->
                 <div class="container mt-3">
-                    <div class="row row-cols-2 gy-2">
-                        <div class="col d-grid">
-                            <button type="button" class="btn btn-primary btn-lg btn-red" onclick="location.href='index.php'">
-                                BACK
-                            </button>
+                    <div class="row align-items-center g-4">
+                        <div class="col-12">
+                            <div class="col-lg-6">
+                                <div class="col-12 ">
+                                    <p style="color: black;"><strong>Warning:</strong> if you press “NEXT” you accept the “Terms and conditions" written below.</p>
+                                </div>
+                            </div>
                         </div>
-                        <div class="col d-grid">
-                            <button type="submit" class="btn btn-primary btn-lg btn-red">
-                                Next
-                            </button>
+                        <div class="row row-cols-2 gy-2">
+                            <div class="col d-grid">
+                                <button type="button" class="btn btn-primary btn-lg btn-red" onclick="location.href='index.php'">
+                                    BACK
+                                </button>
+                            </div>
+                            <div class="col d-grid">
+                                <button type="submit" class="btn btn-primary btn-lg btn-red">
+                                    Next
+                                </button>
+                            </div>
                         </div>
                     </div>
                 </div>

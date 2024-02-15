@@ -101,8 +101,8 @@
                     </div>
                     <div class="col">
                         <div class="input-group">
-                            <span class="input-group-text title" onclick="copy('link')" title="click to copy">Link</span>
-                            <span class="input-group-text form-control overflow-scroll link" id="link" onclick="copy('link')" title="click to copy">psychoacoustics.dpg.psy.unipd.it/sito/demographicData.php?ref=<?php echo $ref; ?></span>
+                            <span class="input-group-text title" title="click to copy">Link</span>
+                            <span class="input-group-text form-control overflow-scroll link" id="link" title="click to copy">psychoacoustics.dpg.psy.unipd.it/sito/demographicData.php?ref=<?php echo $ref; ?></span>
                         </div>
                     </div>
                     <div class="col">

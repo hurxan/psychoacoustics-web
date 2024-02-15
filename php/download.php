@@ -49,7 +49,7 @@ try {
                 $line .= "Modulator Amplitude;Modulator frequency;Modulator Phase;";
             $line .= "n. of blocks;nAFC;ISI;ITI;First factor;First reversals;Second factor;Second reversals;reversal threshold;algorithm;";
             if ($_GET['format'] == "complete")
-                $line .= "block;trials;delta;variable;Variable Position;Pressed button;correct?;reversals\n";
+                $line .= "block;trials;delta;variable;Variable Position;Pressed button;correct?;reversals;threshold\n";
             else
                 $line .= "block;threshold\n";
 
@@ -64,11 +64,16 @@ try {
 
             if ($_GET['format'] == "complete") {
                 //parte variabile e scrittura su file
-                $results = explode(",", $_SESSION["results"]);
                 //results sarà nella forma ["bl1;tr1;del1;var1;varpos1;but1;cor1;rev1", "bl2;tr2;...", ...]
+                $results = explode(",", $_SESSION["results"]);
+                $res = explode(";", $_SESSION["score"]);
                 for ($i = 0; $i < count($results) - 1; $i++) {
                     fwrite($txt, $firstValues . ";");//scrivo i valori fissi
                     fwrite($txt, $results[$i]);//scrivo i valori variabili
+                    if ($i == count($results) - 2)
+                        fwrite($txt, ";" . $res[0]);//scrivo lo score del blocco
+                    else
+                        fwrite($txt, ";" . "NA");
                     fwrite($txt, "\n");//vado all'altra linea
                 }
             } else {

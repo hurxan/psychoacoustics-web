@@ -166,7 +166,7 @@ if (isset($_SESSION['test'])) {
     else if ($_GET['test'] == "nmod" && (($_POST["modAmplitude"] == "") || ($_POST["modAmplitude"] == "undefined")))
         header("Location: ../soundSettings.php?test={$_GET['test']}&err=modAmp1");
 
-    else if ($_GET['test'] == "nmod" && (!is_numeric($_POST["modAmplitude"]) || $_POST["modAmplitude"] > 0))
+    else if ($_GET['test'] == "nmod" && (!is_numeric($_POST["modAmplitude"])))
         header("Location: ../soundSettings.php?test={$_GET['test']}&err=modAmp2");
 
     //controlli su modFrequency

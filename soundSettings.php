@@ -393,16 +393,16 @@ if (isset($_SESSION['usr'])) {
                 <?php if ($type == "nmod") { ?>
                     <div class="col">
                         <div class="input-group flex-nowrap"
-                            title="dB of the modulator, 0dB = 1 is the maximum value">
+                            title="% of the modulator">
                             <span class="input-group-text">Modulator Depth</span>
                             <input type="text" class="form-control" name="modAmplitude" id="modAmplitude"
                                 value="<?php
                                 if ($row && $row["modAmp"] != "")
                                     echo $row['modAmp'];
                                 else
-                                    echo "-8";
+                                    echo "10";
                                 ?>">
-                            <span class="input-group-text">dB</span>
+                            <span class="input-group-text">%</span>
                         </div>
                     </div>
                 <?php } ?>

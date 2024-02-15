@@ -132,7 +132,6 @@ document.addEventListener('keypress', function keypress(event) {
         }
     }
 });
-
 //funzione per implementare l'algoritmo nD1U
 function nDOWNoneUP(n) {
     delta = modAmp;
@@ -141,7 +140,8 @@ function nDOWNoneUP(n) {
         history[i] = 1;
         correctAnsw += 1;
         if (correctAnsw == n) { //if there are n consegutive correct answers
-            modAmp *= currentFactor;
+            modAmp /= currentFactor;
+            
             correctAnsw = 0;
             if (positiveStrike == 0) {
                 //there was a reversal

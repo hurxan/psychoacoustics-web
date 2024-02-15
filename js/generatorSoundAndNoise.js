@@ -120,7 +120,8 @@ function playModulatedNoise(time, carAmpDb, carDur, modAmpDb, modFreq, modPhase,
     vol.connect(context.destination);   // collego volume all'uscita audio
 
     var carAmp = (10 ** (carAmpDb / 20)); // cambio unità di misura
-    var modAmp = (10 ** (modAmpDb / 20)); // cambio unità di misura
+    // var modAmp = (10 ** (modAmpDb / 20)); // cambio unità di misura
+    var modAmp = modAmpDb/100; // cambio unità di misura
 
     let channels = 1;
     var frameCount = context.sampleRate * carDur;

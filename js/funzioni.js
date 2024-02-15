@@ -34,14 +34,14 @@ function updatePage(display){
 	}
 }
 
-audio = new Audio("audio/sound.mp3");
+audio = new Audio("audio/audio.mp3");
 volume = document.getElementById("volume");
 // update the volume when the slider is moved
 volume.addEventListener("input", (e) => {
   console.log("playing");
   audio.volume = e.currentTarget.value / 100;
   audio.play();
-  window.setTimeout(function(){audio.pause();}, 2000);
+  window.setTimeout(function(){audio.pause();}, 1000);
 });
 
 window.updatePage = updatePage;

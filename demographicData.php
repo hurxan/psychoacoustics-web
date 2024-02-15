@@ -210,7 +210,7 @@
                             </div>
                             <div class="col d-grid">
                                 <button type="submit" class="btn btn-primary btn-lg btn-red">
-                                    Next
+                                    NEXT
                                 </button>
                             </div>
                         </div>

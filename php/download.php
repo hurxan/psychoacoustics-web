@@ -65,13 +65,13 @@ try {
             if ($_GET['format'] == "complete") {
                 //parte variabile e scrittura su file
                 //results sarà nella forma ["bl1;tr1;del1;var1;varpos1;but1;cor1;rev1", "bl2;tr2;...", ...]
-                $results = explode(",", $_SESSION["results"]);
-                $res = explode(";", $_SESSION["score"]);
+                $results = explode(",", $_SESSION["results"]);             
                 for ($i = 0; $i < count($results) - 1; $i++) {
                     fwrite($txt, $firstValues . ";");//scrivo i valori fissi
                     fwrite($txt, $results[$i]);//scrivo i valori variabili
-                    if ($i == count($results) - 2)
-                        fwrite($txt, ";" . $res[0]);//scrivo lo score del blocco
+                    $block = $results[$i][0];
+                    if ($results[$i][0]!=$results[$i+1][0])
+                        fwrite($txt, ";" . explode(";", $_SESSION["score"])[$block-1]);//scrivo il punteggio
                     else
                         fwrite($txt, ";" . "NA");
                     fwrite($txt, "\n");//vado all'altra linea

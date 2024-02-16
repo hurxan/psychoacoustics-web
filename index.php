@@ -87,10 +87,8 @@ if (isset($_GET['err'])) {
             manual</a> for further info on how to use the toolbox.
         <br><br>
         In the tasks you can set up the characteristics of the sounds as well as
-        the characteristics of the adaptive staircase. The tests implement the
-        following adaptive staircase algorithms: 2-down 1-up,
-        and 3-down 1-up. Please refer to Levitt (JASA, 1971) for more info on
-        these adaptive staircases.
+        the characteristics of the adaptive staircase. The tests implement the 2-down 1-up,
+        and 3-down 1-up algorithms suggested by Levitt (JASA, 1971).
     </p>
 </div>
 

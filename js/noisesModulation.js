@@ -159,7 +159,7 @@ function nDOWNoneUP(n) {
     } else { //wrong answer
         history[i] = 0;
         correctAnsw = 0;
-        modAmp /= currentFactor;
+        modAmp *= currentFactor;
 
         if (positiveStrike == 1) {
             //there was a reversal

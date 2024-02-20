@@ -146,7 +146,11 @@ if (isset($_SESSION['usr'])) {
 
         <!-- Primo slot di setting -->
         <div class="container mt-3 p-3 border rounded-4 bg-light">
-            <h5>Set the characteristics of the standard tone</h5>
+            <?php
+            if($type == "gap" || $type == "ndur") echo "<h5>Set the characteristics of the standard noise</h5>"; 
+            else if($type == "nmod") echo "<h5>Set the characteristics of the standard noise and of the modulator</h5>";
+            else echo "<h5>Set the characteristics of the standard tone</h5>";
+            ?>
             <?php if ($type != "nmod") { ?>
                 <div class="row row-cols-1 row-cols-lg-3 gy-3">
                     <div class="col">
@@ -188,7 +192,10 @@ if (isset($_SESSION['usr'])) {
                                    if ($row)
                                        echo $row['dur'];
                                    else
-                                       echo "500";
+                                       if ($type == "dur" || $type == "ndur" || $type == "amp" || $type == "freq")
+                                           echo "250";
+                                       else
+                                           echo "500";
                                    ?>">
                             <span class="input-group-text">ms</span>
                         </div>
@@ -435,12 +442,12 @@ if (isset($_SESSION['usr'])) {
                                    if ($row && $row['type'] == 'PURE_TONE_DURATION')
                                        echo $row['delta'];
                                    else
-                                       echo "300";
+                                       echo "150";
                                } else if ($type == "ndur") {
                                    if ($row && $row['type'] == 'WHITE_NOISE_DURATION')
                                        echo $row['delta'];
                                    else
-                                       echo "300";
+                                       echo "150";
                                } else if ($type == "gap") {
                                    if ($row && $row['type'] == 'WHITE_NOISE_GAP')
                                        echo $row['delta'];

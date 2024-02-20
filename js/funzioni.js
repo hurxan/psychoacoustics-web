@@ -41,7 +41,7 @@ volume.addEventListener("input", (e) => {
   console.log("playing");
   audio.volume = e.currentTarget.value / 100;
   audio.play();
-  window.setTimeout(function(){audio.pause();}, 1000);
+  window.setTimeout(function(){audio.pause();}, 5000);
 });
 
 window.updatePage = updatePage;

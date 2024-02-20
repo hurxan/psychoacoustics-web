@@ -249,13 +249,7 @@
 
     <form action="php/soundSettingsValidation.php" name="Settings" method="post">
         <div class="container">
-            <div class="row row-cols-2 gy-2">
-                <div class="col d-grid">
-                    <button type="button" class="btn btn-primary btn-lg btn-red"
-                            onclick="location.href='demographicData.php'">
-                        BACK
-                    </button>
-                </div>
+            <div class="row gy-2">
                 <div class="col d-grid">
                     <button type="submit" class="btn btn-primary btn-lg btn-red">
                         START

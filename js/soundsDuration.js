@@ -59,8 +59,8 @@ function saveResults() {
     //save new data
     results[0][i] = currentBlock;				// block
     results[1][i] = i + 1;						// trial
-    results[2][i] = parseFloat(parseInt((varDur - stdDur) * 1000) / 1000); 	// approximated delta
-    results[3][i] = parseFloat(parseInt(varDur * 1000) / 1000);				// approximated variable value
+    results[2][i] = parseFloat(parseInt((varDur - stdDur) * 1000)); 	// approximated delta
+    results[3][i] = parseFloat(parseInt(varDur * 1000));				// approximated variable value
     results[4][i] = swap;						// variable position
     results[5][i] = pressedButton; 				// pressed button
     results[6][i] = pressedButton == swap ? 1 : 0;	// is the answer correct? 1->yes, 0->no

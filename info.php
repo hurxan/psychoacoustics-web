@@ -86,7 +86,7 @@
 <div class="container my-5 p-5 rounded rounded-4 bg-white-transparent">
     <h2 class="">Hi <?php echo $_SESSION['name']; ?></h2>
     <p id="infoDescription" class="">
-        You will now do an acoustic test that will measure your sensibility to the <?php
+        You will now do a test that will measure your sensibility to the <?php
         if ($type == 'amplitude')
             echo "amplitude of a sound";
         else if ($type == 'frequency')
@@ -101,8 +101,8 @@
             echo "amplitude modulation of a noise";
         ?>.
         <br><br>
-        During the test you will be asked a series of questions. In each question you will
-        hear <?php echo $row['nAFC']; ?> sounds and will have to choose which of them was the <?php
+        The test unfolds along several trials. In each trial you will
+        hear <?php echo $row['nAFC']; ?> sound-intervals and will have to choose which of them was the <?php
         if ($type == 'amplitude')
             echo "loudest";
         else if ($type == 'frequency')
@@ -116,7 +116,9 @@
         else if ($type == 'nmodulation')
             echo "modulated";
         ?>.
-        <br><br><?php
+        <br><br>
+
+        <!-- <?php
         if ($row['nAFC'] > 2)
             echo "Only o";
         else
@@ -202,9 +204,9 @@
         <br>
         At the end you can download a csv file that summarizes all the tests done (and also a file with the details of
         each test, if you are logged in with an account).
-        <br><br>
+        <br><br> -->
 
-        <?php if ($row["feedback"]) echo " You will receive a feedback to advice whether the response is correct or not."; ?>
+        <?php if ($row["feedback"]) echo " Click \"Start test preview\" to try some familiarization trials."; ?>
 
     </p>
 

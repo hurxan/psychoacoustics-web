@@ -32,11 +32,11 @@ if (isset($_GET['err'])) {
         <div class="col-12 col-md-7 border bg-light rounded-4 p-5">
             <h2>Your threshold is
                 <?php
-                if (isset($_SESSION['score']))
-                    if (strrpos($_SESSION['score'], ";"))
-                        echo substr($_SESSION['score'], strrpos($_SESSION['score'], ";") + 1);
+                if (isset($_SESSION['geometric_score']))
+                    if (strrpos($_SESSION['geometric_score'], ";"))
+                        echo substr($_SESSION['geometric_score'], strrpos($_SESSION['geometric_score'], ";") + 1);
                     else
-                        echo $_SESSION['score'];
+                        echo $_SESSION['geometric_score'];
                 ?>
             </h2>
             <div class="container-fluid mt-5">

@@ -105,6 +105,7 @@ function select(button) {
             deltaBefore = results[2][reversalsPositions[j] - 1]; //delta before the reversal
             deltaAfter = results[2][reversalsPositions[j]]; //delta after the reversal
             score += (deltaBefore + deltaAfter) / 2; //average delta of the reversal
+            console.log(score);
         }
         geometric_score = Math.pow(score, 1/reversalThreshold);
         score /= reversalThreshold; //average deltas of every reversal
@@ -127,10 +128,6 @@ function select(button) {
 
         //randomize and play the next sounds
         random();
-
-        console.log(geometric_score);
-        console.log(score);
-
         //window.setTimeout("random()", ITI); //next sounds after interTrialInterval ms
     }
 }

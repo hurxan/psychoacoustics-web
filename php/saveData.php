@@ -29,10 +29,10 @@
 			else
 				$_SESSION["score"] = $_GET['score'];
 
-			// if(isset($_SESSION["geometric_score"]))
-			// 	$_SESSION["geometric_score"] .= ";".$_GET['geometric_score'];
-			// else
-			// 	$_SESSION["geometric_score"] = $_GET['geometric_score'];
+			if(isset($_SESSION["geometric_score"]))
+				$_SESSION["geometric_score"] .= ";".$_GET['geometric_score'];
+			else
+				$_SESSION["geometric_score"] = $_GET['geometric_score'];
 
 			if(isset($_SESSION["results"]))
 				$_SESSION["results"] .= $_GET['result'];

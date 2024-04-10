@@ -128,6 +128,10 @@ function select(button) {
 
         //randomize and play the next sounds
         random();
+
+        console.log(geometric_score);
+        console.log(score);
+
         //window.setTimeout("random()", ITI); //next sounds after interTrialInterval ms
     }
 }

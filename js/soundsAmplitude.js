@@ -25,7 +25,7 @@ var i = 0;						// next index of the array
 var countRev = 0;				// count of reversals 
 var results = [[], [], [], [], [], [], [], []];		// block, trial, delta, variable value, variable position, pressed button, correct answer?, reversals
 var score = 0					// final score
-var geometric_score = 0			
+var geometric_score = 1			
 var positiveStrike = -1;		// -1 = unsetted, 0 = negative strike, 1 = positive strike
 var result = "";				// final results that will be saved on the db
 

@@ -38,6 +38,8 @@
         var reversalThreshold = parseInt(<?php echo $_SESSION["threshold"]; ?>);
         var algorithm = <?php echo "'{$_SESSION["algorithm"]}'"; ?>;
         var currentBlock = parseInt(<?php if (isset($_SESSION["currentBlock"])) echo $_SESSION["currentBlock"] + 1; else echo "1"?>);
+        var geometric_score = <?php echo "'{$_SESSION["geometric_score"]}'"; ?>;
+        console.log(geometric_score);
     </script>
     <script type="text/javascript"
             src="js/generatorSoundAndNoise.js<?php if (isset($_SESSION['version'])) echo "?{$_SESSION['version']}"; ?>"

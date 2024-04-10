@@ -81,7 +81,8 @@ try {
                 for ($i = 0; $i < count($results); $i++) {
                     fwrite($txt, $firstValues . ";");//scrivo i valori fissi
                     fwrite($txt, ($i + 1) . ";");//scrivo il blocco
-                    fwrite($txt, $results[$i]);//scrivo lo score del blocco
+                    fwrite($txt, $results[$i] . ";");//scrivo lo score del blocco
+                    fwrite($txt, $_SESSION["geometric_score"]);//scrivo il punteggio
                     fwrite($txt, "\n");//vado all'altra linea
                 }
             }

@@ -71,9 +71,9 @@ try {
                     fwrite($txt, $results[$i]);//scrivo i valori variabili
                     $block = $results[$i][0];
                     if ($results[$i][0]!=$results[$i+1][0])
-                        fwrite($txt, ";" . explode(";", $_SESSION["score"])[$block-1]);//scrivo il punteggio
+                        fwrite($txt, ";" . explode(";", $_SESSION["score"])[$block-1] . ";" . $_SESSION["geometric_score"]);//scrivo il punteggio
                     else
-                        fwrite($txt, ";" . "NA");
+                        fwrite($txt, ";" . "NA" . ";" . "NA");//scrivo il punteggio
                     fwrite($txt, "\n");//vado all'altra linea
                 }
             } else {

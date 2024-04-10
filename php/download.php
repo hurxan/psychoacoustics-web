@@ -49,9 +49,9 @@ try {
                 $line .= "Modulator Amplitude;Modulator frequency;Modulator Phase;";
             $line .= "n. of blocks;nAFC;ISI;ITI;First factor;First reversals;Second factor;Second reversals;reversal threshold;algorithm;";
             if ($_GET['format'] == "complete")
-                $line .= "block;trials;delta;variable;Variable Position;Pressed button;correct?;reversals;threshold\n";
+                $line .= "block;trials;delta;variable;Variable Position;Pressed button;correct?;reversals;threshold (arithmetic mean);threshold (geometric mean)\n";
             else
-                $line .= "block;threshold\n";
+                $line .= "block;threshold (arithmetic mean);threshold (geometric mean)\n";
 
             fwrite($txt, $line);
 

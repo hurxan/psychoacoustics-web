@@ -32,6 +32,7 @@
             <div class="col-12 col-md-7 border bg-light rounded-4 p-5">
                 <h2>Your threshold is:</h2>
                 <p></p>
+                <h2>
                 <?php
                 if (isset($_SESSION['geometric_score']))
                     if (strrpos($_SESSION['geometric_score'], ";"))
@@ -39,8 +40,10 @@
                     else
                         echo $_SESSION['geometric_score'];
                 ?>
+                </h2>
                 <h2>(Geometric Mean)</h2>
                 <p></p>
+                <h2>
                 <?php
                 if (isset($_SESSION['score']))
                     if (strrpos($_SESSION['score'], ";"))
@@ -48,6 +51,8 @@
                     else
                         echo $_SESSION['score'];
                 ?>
+                </h2>
+
                 <h2>(Arithmetic Mean)</h2>
 
                 <div class="container-fluid mt-5">

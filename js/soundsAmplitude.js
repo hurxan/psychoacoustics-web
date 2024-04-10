@@ -114,10 +114,10 @@ function select(button) {
         //prima tutti i nomi, poi tutti i dati
         var description = "&amp=" + amp + "&freq=" + freq + "&dur=" + dur + "&onRamp=" + onRamp + "&offRamp=" + offRamp +/*"&phase="+phase+*/"&blocks=" + blocks + "&delta=" + startingDelta + "&nAFC=" + nAFC + "&ISI=" + ISI + "&ITI=" + ITI;
         description += "&fact=" + factor + "&secFact=" + secondFactor + "&rev=" + reversals + "&secRev=" + secondReversals + "&threshold=" + reversalThreshold + "&alg=" + algorithm + "&sampleRate=" + context.sampleRate;
-        description += "&geometric_score=" + geometric_score; // Append geometric_score here
 
+        console.log(geometric_score);
         //pass the datas to the php file
-        location.href = "php/saveData.php?result=" + result + "&timestamp=" + timestamp + "&type=ndur" + description + "&currentBlock=" + currentBlock + "&score=" + score + "&geometric_score=" + geometric_score +  "&saveSettings=" + saveSettings;
+        // location.href = "php/saveData.php?result=" + result + "&timestamp=" + timestamp + "&type=ndur" + description + "&currentBlock=" + currentBlock + "&score=" + score + "&geometric_score=" + geometric_score +  "&saveSettings=" + saveSettings;
     }
     //if the test is not ended
     else {

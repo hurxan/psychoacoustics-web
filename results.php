@@ -39,9 +39,7 @@
                         echo substr($_SESSION['geometric_score'], strrpos($_SESSION['geometric_score'], ";") + 1);
                     else
                         echo $_SESSION['geometric_score'];
-                ?>
-                </h2>
-                <h2>(Geometric Mean)</h2>
+                ?> (Geometric Mean)</h2>
                 <p></p>
                 <h2>
                 <?php
@@ -50,10 +48,7 @@
                         echo substr($_SESSION['score'], strrpos($_SESSION['score'], ";") + 1);
                     else
                         echo $_SESSION['score'];
-                ?>
-                </h2>
-
-                <h2>(Arithmetic Mean)</h2>
+                ?> (Arithmetic Mean)</h2>
 
                 <div class="container-fluid mt-5">
                     <div class="row row-cols-1 row-cols-lg-3 align-items-center justify-content-between g-2">

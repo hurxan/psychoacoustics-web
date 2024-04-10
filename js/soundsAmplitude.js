@@ -106,11 +106,9 @@ function select(button) {
             deltaAfter = results[2][reversalsPositions[j]]; //delta after the reversal
             score += (deltaBefore + deltaAfter) / 2; //average delta of the reversal
         }
-        var geometric_score = Math.pow(score, 1/reversalThreshold);
+        geometric_score = Math.pow(score, 1/reversalThreshold);
         score /= reversalThreshold; //average deltas of every reversal
         score = parseFloat(parseInt(score * 100) / 100); //approximate to 2 decimal digits
-        console.log("Score: " + score);
-        console.log("Geometric score: " + geometric_score);
 
         //format description as a csv file
         //prima tutti i nomi, poi tutti i dati
@@ -118,7 +116,7 @@ function select(button) {
         description += "&fact=" + factor + "&secFact=" + secondFactor + "&rev=" + reversals + "&secRev=" + secondReversals + "&threshold=" + reversalThreshold + "&alg=" + algorithm + "&sampleRate=" + context.sampleRate;
 
         //pass the datas to the php file
-        location.href = "php/saveData.php?result=" + result + "&timestamp=" + timestamp + "&type=amp" + description + "&currentBlock=" + currentBlock + "&score=" + score + "&saveSettings=" + saveSettings;
+        location.href = "php/saveData.php?result=" + result + "&timestamp=" + timestamp + "&type=ndur" + description + "&currentBlock=" + currentBlock + "&score=" + score + "&saveSettings=" + saveSettings;
     }
     //if the test is not ended
     else {

@@ -59,6 +59,7 @@ if (isset($_SESSION['test'])) {
         $_SESSION["threshold"] = $row["thr"];
         $_SESSION["algorithm"] = $row["alg"];
         unset($_SESSION['score']);
+        unset($_SESSION['geometric_score']);
         unset($_SESSION['currentBlock']);
         unset($_SESSION['results']);
 
@@ -297,6 +298,7 @@ if (isset($_SESSION['test'])) {
         $_SESSION["threshold"] = $_POST["threshold"];
         $_SESSION["algorithm"] = $_POST["algorithm"];
         unset($_SESSION['score']);
+        unset($_SESSION['geometric_score']);
         unset($_SESSION['currentBlock']);
         unset($_SESSION['results']);
 

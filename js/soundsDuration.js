@@ -123,7 +123,7 @@ function select(button) {
         description += "&fact=" + factor + "&secFact=" + secondFactor + "&rev=" + reversals + "&secRev=" + secondReversals + "&threshold=" + reversalThreshold + "&alg=" + algorithm + "&sampleRate=" + context.sampleRate;
 
         //pass the datas to the php file
-        location.href = "php/saveData.php?result=" + result + "&timestamp=" + timestamp + "&type=ndur" + description + "&currentBlock=" + currentBlock + "&score=" + score + "&geometric_score=" + geometric_score + "&saveSettings=" + saveSettings;
+        location.href = "php/saveData.php?result=" + result + "&timestamp=" + timestamp + "&type=dur" + description + "&currentBlock=" + currentBlock + "&score=" + score + "&geometric_score=" + geometric_score + "&saveSettings=" + saveSettings;
     }
     //if the test is not ended
     else {

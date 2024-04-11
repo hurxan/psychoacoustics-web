@@ -78,11 +78,12 @@ try {
                 }
             } else {
                 $results = explode(";", $_SESSION["score"]);
+                $results_geometricsore = explode(";", $_SESSION["geometric_score"]);
                 for ($i = 0; $i < count($results); $i++) {
                     fwrite($txt, $firstValues . ";");//scrivo i valori fissi
                     fwrite($txt, ($i + 1) . ";");//scrivo il blocco
                     fwrite($txt, $results[$i] . ";");//scrivo lo score del blocco
-                    fwrite($txt, $_SESSION["geometric_score"]);//scrivo il punteggio
+                    fwrite($txt, $results_geometricsore[$i]);//scrivo il punteggio
                     fwrite($txt, "\n");//vado all'altra linea
                 }
             }

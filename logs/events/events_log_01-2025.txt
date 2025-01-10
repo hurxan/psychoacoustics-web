@@ -1,0 +1,13 @@
+[2025-01-10 09:01:50] User #1016 logged out
+[2025-01-10 09:26:53] New account created #1
+[2025-01-10 09:27:11] user #1 downloaded his Personal tests
+[2025-01-10 09:27:18] user #1 downloaded his Partecipant's tests
+[2025-01-10 09:27:48] User #1 logged out
+[2025-01-10 09:27:53] User #1 logged in
+[2025-01-10 09:28:26] User #1 created a new Referral test
+[2025-01-10 09:28:30] User #1 changed his referral test
+[2025-01-10 09:28:47] User #1 changed his referral test
+[2025-01-10 09:29:01] Guest #2 created
+[2025-01-10 09:30:43] user #1 downloaded his Personal tests
+[2025-01-10 09:30:45] user #1 downloaded his Partecipant's tests
+[2025-01-10 09:31:20] User #1 logged out

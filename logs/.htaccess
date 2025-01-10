@@ -1,0 +1,9 @@
+AuthType Basic
+AuthName "Area Protetta"
+AuthUserFile /var/www/.htpasswd
+Require valid-user
+
+Order Deny,Allow
+Deny from All
+Allow from 147.162.0.0/16
+ErrorDocument 403 "Access denied. Your network is network is not authorized to access this resource."

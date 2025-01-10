@@ -45,7 +45,7 @@ var swap = -1;						// position of variable sound
 var betweenRampDur = 0.01           // durata rampa nel gap
 
 //funzione per randomizzare l'output
-function random() {
+function createRandomizedOutput() {
     for (var j = 1; j <= nAFC; j++)
         document.getElementById("button" + j).disabled = true;
     document.getElementById("playTest").disabled = true;
@@ -97,7 +97,7 @@ function random() {
 
 }
 
-function select(button) {
+function computeResponse(button) {
     for (var j = 1; j <= nAFC; j++)
         document.getElementById("button" + j).disabled = true;
     let element = document.getElementById("alert")

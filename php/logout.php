@@ -1,8 +1,10 @@
 <?php
 	session_start();
-
-	unset($_SESSION['usr']);
-	unset($_SESSION['idGuest']);
+	Include_once "helpers/utils.php";
 	
+	logEvent("User #{$_SESSION['loggedUser']['id']} logged out");
+
+    unset($_SESSION['loggedUser']);
+
 	header("Location: ../index.php");
-?>
+

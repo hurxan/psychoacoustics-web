@@ -1,0 +1,2 @@
+[10-Jan-2025 09:17:33 Europe/Berlin] PHP Notice:  Undefined index: referralName in /var/www/html/sito/php/helpers/utils.php on line 39
+[10-Jan-2025 09:26:53 Europe/Berlin] PHP Notice:  Undefined index: gender in /var/www/html/sito/php/registering.php on line 52

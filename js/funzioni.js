@@ -19,10 +19,6 @@ function copy(id){
 	alert('copied to clipboard');
 }
 
-function updateLink(ref){
-	var test = document.getElementById('testType').value;
-	document.getElementById('link').innerHTML = "psychoacoustics.dpg.psy.unipd.it/sito/demographicData.php?ref="+ref+"&test="+test;
-}
 
 function updatePage(display){
 	var elems = document.getElementsByClassName("conditionalDisplay");
@@ -34,14 +30,26 @@ function updatePage(display){
 	}
 }
 
-audio = new Audio("audio/audio.mp3");
-volume = document.getElementById("volume");
-// update the volume when the slider is moved
-volume.addEventListener("input", (e) => {
-  console.log("playing");
-  audio.volume = e.currentTarget.value / 100;
-  audio.play();
-  window.setTimeout(function(){audio.pause();}, 5000);
-});
 
-window.updatePage = updatePage;
+function setupVolumeControl() {
+    const audio = new Audio("audio/audio.mp3"); // Create the audio object
+    const volume = document.getElementById("volume"); // Get the volume slider element
+
+    // Ensure the slider exists before attaching events
+    if (volume) {
+        volume.addEventListener("input", (e) => {
+            console.log("playing");
+            audio.volume = e.currentTarget.value / 100; // Adjust audio volume
+            audio.play(); // Start playing the audio
+
+            // Pause the audio after 5 seconds
+            window.setTimeout(() => {
+                audio.pause();
+            }, 2000);
+        });
+	
+	window.updatePage = updatePage;
+    } else {
+        console.error("Volume slider not found.");
+    }
+}
